@@ -10,14 +10,12 @@ public class Exercise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int exerciseId;
     private String name;
-    private String description;
-    private ExerciseGroup exerciseGroup;
+    private String category;
 
-    public Exercise(int exerciseId, String name, String description, ExerciseGroup exerciseGroup) {
+    public Exercise(int exerciseId, String name, String description, String category) {
         this.exerciseId = exerciseId;
         this.name = name;
-        this.description = description;
-        this.exerciseGroup = exerciseGroup;
+        this.category = category;
     }
 
     public int getExerciseId() {
@@ -36,20 +34,12 @@ public class Exercise {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getCategory() {
+        return category;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public ExerciseGroup getExerciseGroup() {
-        return exerciseGroup;
-    }
-
-    public void setExerciseGroup(ExerciseGroup exerciseGroup) {
-        this.exerciseGroup = exerciseGroup;
+    public void setCategory(String exerciseGroup) {
+        this.category = exerciseGroup;
     }
 
     public Exercise() {
